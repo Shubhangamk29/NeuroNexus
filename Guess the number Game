@@ -1,0 +1,34 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    srand((unsigned int) time(NULL));
+    int num = (rand() % 100) + 1;
+
+    int guess = 0;
+    int count = 0;
+    do
+    {
+       cout<<"Guess your number between  (1- 100) "<<endl;
+       cin>>guess;
+       if(guess>num)
+       {
+        cout<<"Gussed number is high than Expected"<<endl;
+        count++;
+       }
+       else if(guess<num)
+       {
+        cout<<"Gussed number is less than Expected"<<endl;
+        count++;
+       }
+       else
+       {
+        cout<<"woohooo!!!    you guessed the right number"<<endl;
+        cout<<endl;
+        cout<<"you guessed the number in"<<"\t"<<count+1<<"th trial"<<endl;
+        cout<<endl;
+       }
+       
+    } while (guess!=num);
+    
+}
